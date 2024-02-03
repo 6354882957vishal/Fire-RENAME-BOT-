@@ -1,0 +1,20 @@
+services:
+  - type: web
+    plan: free
+    name: PYRO-RENAME-BOT
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    repo: https://github.com/6354882957vishal/Fire-RENAME-BOT-.git
+    branch: main
+    autoDeploy: false
+    envVars:
+      - key: API_ID
+        sync: false
+      - key: API_HASH
+        sync: false
+      - key: BOT_TOKEN
+        sync: false
+      - key: ADMIN
+        sync: false
+      - key: CAPTION
